@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iGenius | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #043e76;
+        }
+        header {
+            background: url('header-background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background-color: #e65c00;
+        }
+        nav {
+            background-color: white;
+            padding: 10px 0px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            margin-left: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0 50px 0 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+        }
+        section {
+            padding: 60px 20px;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1.25rem;
+            color: #f0f0f0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="/" style="color:black; text-decoration:none;">iGenius</a></div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Bienvenue sur iGenius</h1>
+        <p>Nous créons des expériences numériques incroyables</p>
+        <a href="#about" class="btn">En savoir plus</a>
+    </header>
+    <section id="about" class="content">
+        <h2>À propos de nous</h2>
+        <p>Nous sommes une entreprise dédiée à fournir les meilleures solutions numériques pour nos clients.</p>
+    </section>
+    <section id="services" class="content">
+        <h2>Nos Services</h2>
+        <p>Découvrez notre gamme complète de services allant du développement web au marketing digital.</p>
+    </section>
+    <section id="contact" class="content">
+        <h2>Contactez-nous</h2>
+        <p>Pour plus d'informations, n'hésitez pas à nous contacter.</p>
+    </section>
+    <footer>
+         &copy; 2024 iGenius. Tous droits réservés. <br>
+         <span id="datetime"></span>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+            document.getElementById('datetime').textContent = now.toLocaleDateString('fr-FR', options);
+        }
+
+        // Mettre à jour la date et l'heure toutes les secondes
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>
