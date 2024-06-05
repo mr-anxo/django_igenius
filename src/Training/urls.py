@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 from Training.views import index
-from blog.views import blog
 
 urlpatterns = [
     path("", index, name="home"),
